@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<meta charset="utf-8"/>
+	<meta http-equiv="x-ua-compatible" content="IE=edge">
+	
+	<link rel="stylesheet" href="../config/style/font-awesome-4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../config/style/jquery-ui-1.10.4.custom.min.css">
+	<link rel="stylesheet" href="../config/style/styles.css">
+	<script type="text/javascript" src="../config/script/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="../config/script/jquery-ui-1.10.4.custom.min.js"></script>
+    <script type="text/javascript" src="../config/script/scriptquiz.js"></script>
+	<style>
+	body{background-color:#FFFFFF;}
+	</style>
+	<script>
+	$(document).ready(function(){
+			setMediaSrc(0);
+			//remove Contenteditable=true
+			$('.jcm_ref').each(function(){
+				$(this).removeAttr("contenteditable");
+			});
+			//Remove close button
+			if($(".close_element").length){
+				$(".close_element").remove();
+			}
+			//remove Close container
+			if($(".btnq_delete").length){
+				$(".btnq_delete").remove();	
+			}
+			$(".mquizbtn_container").remove();
+			$(".btnfib_container").remove();
+			$(".scrbtn_container").remove();
+			if($("ul.scrabble_input").length>0){
+				$("ul.scrabble_input").each(function(index){
+					var id = $(this)[0].id;
+					var num = id.replace("scrabbleinput","");
+					if(!$("#scrcontainer"+num+" input").length){
+						$("ul#"+id).sortable();
+						$("ul#"+id).disableSelection();
+					}
+				});
+			}
+			function setMediaSrc(num){
+				var type= ["img","video","audio","a.iconfile"];
+				var fileName,path, selector,iPath, vPath, aPath,fPath;
+				if(num == 0){
+					selector = "#main";
+					iPath = "../images/";
+					vPath = "../video/";
+					aPath = "../audio/";
+					fPath ="../file/";
+				}else{
+					selector = ".main_class";
+					iPath = "images/";
+					vPath = "video/";
+					aPath = "audio/";
+					fPath ="file/";
+				}
+				for(i=0;i<type.length;i++){
+					$(selector+" "+type[i]).each(function(j){
+						if($(this).length){
+							path = $(this)[0].src;
+							if(path != null){
+								fileName = path.substring(path.lastIndexOf('/')+1);
+							}
+						switch(type[i]){
+						case "img":
+						$(this).attr("src",iPath+fileName);
+						break;
+						case "video":
+						$(this).attr("src",vPath+fileName);
+						break;		
+						case "audio":
+						$(this).attr("src",aPath+fileName);
+						break;
+						case "a.iconfile":
+						fileName = $(this).attr("alt");
+						$(this).attr("href",fPath+fileName);
+						break;
+						default:
+						break;
+						}	
+					}
+					});
+			}
+			//A fixed for loading issue with videos/audio tag when launching the html files individually
+			if(num ==0){
+				var tempData = $("#main").html();
+				$("#main").html(tempData);
+			}
+		}		
+	});
+	function viewSection(obj){
+			if(obj.length){
+			id=obj[0].id;
+			$('#section'+id).attr("contenteditable","false");
+			$('#section'+id).fadeToggle();
+			}
+	
+		}
+	</script>
+	
+	
+</head>
+
+
+    <body style="overflow-y:auto">
+	<div class="main_class" id="main">
+	
+        <div id = "frame"
+           role = "content" >
+        </div>
+        
+        <script type="text/javascript">
+         
+            $(document).ready(function() {
+                $("#frame").load("mockcallquiz.html");
+        });
+    
+        </script>   
+
+    </div>
+
+    </body>
+
+</html>

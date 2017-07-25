@@ -1,0 +1,81 @@
+<!----------------------------------------------------------------------------------------------------
+Author:vl406891 VL
+TemplateVersion:1.0.4
+Purpose: main HTML file for Jukebox HTML course
+---------------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<meta charset="utf-8"/>
+	<meta http-equiv="x-ua-compatible" content="IE=edge">
+		
+  <title>GSK CSHD</title>
+  <link rel="stylesheet" href="config/style/font-awesome-4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="config/style/jquery-ui-1.10.4.custom.min.css">
+  <link rel="stylesheet" href="config/style/styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script type="text/javascript" src="config/script/jquery-ui-1.10.4.custom.min.js"></script>
+  <script type="text/javascript" src="config/script/scorm_api.js"></script>
+  <script type="text/javascript" src="config/script/progressbar.min.js"></script>
+  <script type="text/javascript" src="config/script/script.js"></script>
+
+</head>
+
+<body onkeydown="keyCode(event)">
+	<div class="course_content_container">
+	
+<!------------------------------------------------------------------------------------>
+<!--Main Course Content
+<!------------------------------------------------------------------------------------>
+	<div id="course_content"></div>
+	
+
+<!------------------------------------------------------------------------------------>
+<!--Topic Menu
+<!------------------------------------------------------------------------------------>
+	<div id="topic_menu" style="display:none"><ul></ul></div>
+
+	<div id="dd" class="topic_menu_container">
+		
+		<!-- <i id="topic_menu_btn" class="fa fa-bars fa-2x"></i> -->
+        
+		<span class="vertical_line"><b>|</b></span>
+		<span id="course_title_label">Label</span>
+		<div class="navigation_arrow_container">
+		<ul class="navigation_arrow">
+			<li id="markcomplete_label" onclick="markComplete();">Mark Complete</li>
+			<li id="nav_left" onclick="navigatePage(0)"><</li>
+			<li id="nav_right" onclick="navigatePage(1)">></li>
+		</ul>
+		</div>
+		
+		
+	</div>
+<!------------------------------------------------------------------------------------>
+	</div>
+	
+<!------------------------------------------------------------------------------------>
+<!--Overlay for Prompt (Mark Complete, Answer submission)
+<!------------------------------------------------------------------------------------>	
+	<div class="overlay"></div>
+	<div id="alertbox"></div>
+	<div class="overlay2">
+		<div id="alertbox2"></div>
+	</div>
+<!------------------------------------------------------------------------------------>
+<!--Loading Screen
+<!------------------------------------------------------------------------------------>
+	<div id="loading_screen_container">
+		<div class="loading_screen">
+		<p id="course_title">...</p>
+		<div id="progress_bar"></div>
+		<p id="loading_string">Loading Content...</p>
+		<button id="start_course_btn" onclick="startCourse()">Start Course</button>	
+		</div>
+	</div>
+	
+	
+</body>
+</html>

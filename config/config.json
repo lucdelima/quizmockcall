@@ -1,0 +1,26 @@
+{
+  "Created": "2017/07/24",
+  "Template": "cshd",
+  "TemplateVersion": "2.0.9",
+  "Title": "CSHD Mock Calls",
+  "Topics": [
+    "Course Information",
+    "Overview",
+    "MockCalls"
+  ],
+  "Hint": [
+    null
+  ],
+  "Quiz": [
+    null
+  ],
+  "Fib": [
+    null
+  ],
+  "Scrabble": [
+    null
+  ],
+  "Dnd": [
+    null
+  ]
+}

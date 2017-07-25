@@ -1,0 +1,1109 @@
+/*----------------------------------------------------------------------------------------------------
+Author:vl406891 VL
+Version: CSHD template 1.1.4
+
+----------------------------------------------------------------------------------------------------*/
+@media all and (min-width: 120px) and (max-width: 1424px) {
+	/*
+	.topic_menu_container{
+	position: absolute;
+   text-align:center;
+	padding-left:20px !important;
+	padding-right:40px !important;
+	width:100%;
+	min-height:180px;
+	max-height:380px;
+	background-color:#336699;
+	
+}*/
+.a{
+	font-size:18px !important;
+	padding-right:30px !important;
+}
+.navigation_arrow_container{
+	position:relative;
+	top:8px;
+	text-align:center;
+	width:100%;
+	min-height:35px;
+	max-height:100px;
+}
+}
+
+body{
+	background-color:#ffffff;
+	overflow:auto;
+	min-width:1000px;
+    font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; 
+    font-size:18px;
+}
+
+h1{
+    border-bottom: 3px solid #336699;
+    color:#336699;
+    font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; 
+    font-size: 30px;
+}
+
+/*----------------------------------------------------------------------------------
+Course Content
+-----------------------------------------------------------------------------------*/
+.course_content_container{
+	height:100%;
+	word-wrap: break-word;
+	min-width:1000px;
+	display:block;
+}
+
+#course_content{
+	height:650px;
+	overflow-y:auto;
+	overflow-x:hidden;
+	font-size:18px;
+	word-wrap: break-word;
+	padding-left:5px;
+	padding-right:5px;
+}
+
+/*----------------------------------------------------------------------------------
+Topic Menu
+-----------------------------------------------------------------------------------*/
+.topic_menu_container{
+	position: absolute;
+    bottom: -1px;
+	left:0px;
+	width:100%;
+	height:auto;
+	background-color:#336699;
+	
+	
+}
+
+#topic_menu_btn{
+	width:27.43px;
+	padding:10px;
+	color:#ff751a;
+}
+
+
+#topic_menu_btn:hover,.navigation_arrow li:hover{
+	cursor:pointer;
+}
+
+#topic_menu{
+	position:absolute;
+	left:0px;
+	bottom:49px;
+	width:245px;
+	height:auto;
+	background-color:#336699;
+	opacity:0.9;
+	z-index:20;
+	padding-bottom:10px;
+}
+
+#topic_menu ul{
+	font-size:14px;
+	list-style-type:none;
+	margin: 0;
+	padding:10px 20px 0 20px;
+	text-align:center;
+	color:#fff0e5;
+}
+
+#topic_menu li{
+	border-bottom-style: solid;
+	border-width:2px;
+	border-color:#ff751a;
+	padding:3px;
+	
+}
+
+#topic_menu li:hover{
+	cursor:pointer;
+	opacity:0.9;
+	background-color:#ff751a;
+	}
+
+.topic_complete{
+	color:#ff6500;
+}
+
+.topic_complete:hover{
+	color:#ffffff;
+}
+
+
+/*----------------------------------------------------------------------------------
+Navigation bar
+-----------------------------------------------------------------------------------*/
+.navigation_arrow li:hover{
+	color:#ffffff;
+	background :#ff751a;
+    border:5px solid #ffffff;
+}
+
+.vertical_line{
+	font-size:45px;
+	color:black;
+	padding-bottom:5px;
+	position:relative;
+	top:-4px;
+	color:#ff751a;
+}
+
+#course_title_label{
+	font-size:25px;
+	position:relative;
+	top:-4px;
+	color:#fff0e5;
+	padding-left:10px;
+	padding-right:10px;
+	max-width:500px;
+	height:100%;
+}
+
+.navigation_arrow_container{
+	position:relative;
+	top:8px;
+	float:right;
+	width:350px;
+	height:35px;
+}
+
+.navigation_arrow{
+	list-style-type:none;
+    margin: 10px;
+	
+    padding: 0;
+	position:relative;
+	top:-3px;
+}
+
+.navigation_arrow li{
+	display:inline;
+	padding:2px;
+	padding-left:10px;
+	padding-right:10px;
+	font-size:20px;
+	  background :#4462DB;
+border:5px solid #ffffff;
+	border-radius:50px;
+	margin:2px;
+	color:#ffffff;
+}
+
+#markcomplete_label{
+	 visibility: hidden;
+	 opacity:0;
+}
+
+
+.cContent{
+	opacity:0;
+}
+
+
+/*----------------------------------------------------------------------------------
+Overlay
+-----------------------------------------------------------------------------------*/
+.overlay{
+	position:fixed;
+	z-index:99;
+	display: none;
+	opacity: .8;
+	top: 0px;
+	left: 0px;
+	background: #666666;
+	width: 100%;
+	height:100%;
+}
+
+#alertbox{
+	display: none;
+	padding:10px;
+	position: fixed;
+	top:250px;
+	background:#ffffff;
+	border-radius:7px; 
+	text-align:center;
+	width:301px;
+	height:auto;
+	z-index: 100;
+	margin:0 auto;
+	word-wrap: break-word;
+}
+.overlay2{
+	position:fixed;
+	z-index:99;
+	display: none;
+	opacity: .8;
+	top: 0px;
+	left: 0px;
+	background: #666666;
+	width: 100%;
+	height:100%;
+}
+
+#alertbox2{
+	display: none;
+	padding:15px;
+	position: fixed;
+	top:250px;
+        left:45%;
+        border:3px solid gray;
+        lineheight:5px;
+	background:#ffffff;
+	border-radius:7px; 
+	text-align:left;
+	width:401px;
+	height:300px;
+        max-height:300px;
+        overflow-x:hidden;
+        overflow-y:scroll;
+        font-size:16px;
+	z-index: 100;
+	margin:0 auto;
+	word-wrap: break-word;
+}
+.abut{
+	position:relative;
+	display:block;
+	margin:0 auto;
+	margin-top:15px;
+	padding:7px;
+	border-radius:20px;
+       background :#4462DB;
+border:5px solid #ffffff;
+        width:60px;
+	font-size:16px;
+	
+}
+
+.abut:hover{
+    cursor:pointer;
+	
+	
+	font-size:16px;
+         color:#ffffff;
+	 background :#ff751a;
+border:5px solid #ffffff;
+}
+
+/*----------------------------------------------------------------------------------
+Loading Screen
+-----------------------------------------------------------------------------------*/
+.button{
+	position:relative;
+	display:block;
+	margin:0 auto;
+	margin-top:15px;
+	padding:7px;
+	border-radius:20px;
+        background :#4462DB;
+border:5px solid #ffffff;
+        width:60px;
+	font-size:16px;
+	
+}
+
+.button:hover{
+    cursor:pointer;
+	
+	
+	font-size:16px;
+       color:#ffffff;
+	 background :#ff751a;
+border:5px solid #ffffff;
+}
+
+#loading_screen_container{
+	position:absolute;
+	top:0px;
+	left:0px;
+	height:100%;
+	width:100%;
+	background-color: #ffffff;
+	background-image: url("../../misc/loadscreen.jpg");
+	background-size: cover;
+	z-index:100;
+	display:block;
+	opacity:1;
+	font-family:Verdana;
+}
+
+.loading_screen{
+	position:relative;
+	display:block;
+	margin:0 auto;
+	top:175px;
+}
+
+#start_course_btn{
+	position:relative;
+	display:block;
+	margin:0 auto;
+	margin-top:15px;
+	padding:7px;
+	border-radius:20px;
+	color:#ffffff;
+	opacity:0;
+	visibility:hidden;
+       background :#4462DB;
+border:5px solid #ffffff;
+}
+
+#start_course_btn:hover{
+	cursor:pointer;
+	color:#ffffff;
+	 background :#ff751a;
+border:5px solid #ffffff;
+}
+
+#progress_bar{
+	display:block;
+	height:120px;
+	width:120px;
+	margin:0 auto;
+}
+
+#course_title{
+	color:#ffffff;
+	text-align:center;
+	font-size:21px;
+}
+
+#loading_string{
+	text-align:center;
+	color:#ffffff;
+	font-size:12px;
+}
+
+/*----------------------------------------------------------------------------------
+Quiz Section
+-----------------------------------------------------------------------------------*/
+.submitanswer{
+	
+	border-radius:20px;
+    color:#ffffff;
+    background :#4462DB;
+border:5px solid #ffffff;
+	padding:5px;
+}
+
+.submitanswer:hover{
+	cursor:pointer;
+	color:#ffffff;
+	 background :#ff751a;
+border:5px solid #ffffff;
+}
+
+/*----------------------------------------------------------------------------------
+Section Part
+-----------------------------------------------------------------------------------*/
+.section:hover{
+	cursor:pointer;
+	background-color:#3973ac;
+	color:#ffffff;
+	
+}
+
+.disabled{
+	color:white;
+	
+}
+
+/*----------------------------------------------
+CheckBox section
+-----------------------------------------------*/
+.checkbox{
+	height:14px;
+}
+.checkbox:hover{
+	cursor:pointer;
+}
+
+/*----------------------------------------------------------------------------------
+Fill in the Blank
+-----------------------------------------------------------------------------------*/
+/*For Course*/
+.fib_course_textarea{
+	width:750px;
+	height:auto;
+	min-height:100px;
+	border:1px solid black;
+	padding:8px;
+	word-wrap:break-word;
+	margin:10px;
+	border-radius:10px;
+	overflow-y:auto;
+}
+
+
+/*For Course*/
+input.fibinput:focus{
+	border:2px solid #808080;
+	outline: none;
+}
+
+.fibinput{
+	box-shadow: none;
+	border:1px solid #969696;
+}
+
+
+/*----------------------------------------------------------------------------------
+Scrabble
+-----------------------------------------------------------------------------------*/
+ul.scrabble_input{
+	font-size:20px;
+	color:#ffffff;
+	list-style-type: none; 
+	margin: 0; 
+	padding: 0; 
+}
+
+ul.scrabble_input li{
+	border:1px solid #a78f5e;
+	font-weight:bold;
+	border-radius:2px;
+	background-color:#ebd19a;
+	box-shadow:1px 4px 7px rgba(0, 0, 0, 0.2);
+	text-shadow:0px 0px 8px #f5deaf;
+	color:#4e3a10;
+	display:inline-block;
+	padding:14px;
+	margin:10px;
+	text-align:center;
+	width:10px;
+	vertical-align: top;
+}
+
+ul.scrabble_input_sort li:hover{
+	cursor:pointer;
+	border: 2px solid #a78f5e;
+}
+
+.scrincorrect{
+	margin:10px;
+}
+
+.scrabbleanswer{
+	display:block;
+	padding:10px;
+	margin-left:9px;
+	font-size:16px;
+}
+/*----------------------------------------------------------------------------------
+DND
+-----------------------------------------------------------------------------------*/
+/*For course*/
+.dnddropbox{
+	border:1px solid #d7e0e2;
+	padding:5px;
+	border-radius:10px;
+	width:250px;
+	height:50px;
+	display:block;
+	margin:10px;
+	text-align:center;
+	color:gray;
+	font-size:16px;
+}
+
+
+/*For course*/
+.dndselection{
+	border:1px solid #d7e0e2;
+	padding:5px;
+	border-radius:10px;
+	width:520px;
+	min-height:150px;
+	display:block;
+	margin:10px;
+	
+}
+
+/*For course*/
+.dndselection li{
+	border:1px solid black;
+	padding:5px;
+	margin:5px;
+	list-style-type:none;
+	width:150px;
+	text-align:center;
+	border-radius:5px;
+	display:inline-block;
+	word-wrap:break-word;
+	background-color:white;
+}
+
+/*For course*/
+.dndselection li:hover{
+	cursor:pointer;
+	background-color:#cccccc;
+}
+
+/*For course*/
+.dnduseranswer{
+	z-index:10;
+}
+
+.dnddropped{
+	border-color:blue;
+}
+
+.dndhover{
+	background-color:#cccccc;
+}
+.greentext{
+color:green;
+font-size:18px;
+}
+.redtext{
+color:red;
+font-size:18px;
+}
+
+
+/*Smartobjects output*/
+#socircle {
+position: relative;
+
+  width: 100px;
+  height: 100px;
+  border-radius: 200px;
+}
+
+#sorrect {
+position: relative;
+ 
+  width: 200px;
+  height: 80px;
+  border-radius: 50px;
+
+     
+}
+#sorect {
+position: relative;
+ width: 200px;
+  height: 100px;
+}
+#so2rect {
+position: relative;
+ width: 200px;
+  height: 100px;
+  border-radius: 15px 50px 30px 5px;
+}
+
+#so3rect {
+position: relative;
+ width: 200px;
+  height: 100px;
+  border-radius: 15px 50px 30px;
+}
+#so2vrect {
+position: relative;
+ width: 200px;
+  height: 100px;
+ 
+border-radius: 15px 50px;
+}
+
+#so4rect {
+position: relative;
+ width: 200px;
+  height: 100px;
+ 
+border-radius: 70px/15px;
+}
+
+
+#so5rect {
+position: relative;
+ width: 200px;
+  height: 100px;
+ 
+ border-radius:25px/70px;
+}
+
+
+#so6rect {
+position: relative;
+ width: 200px;
+  height: 100px;
+ 
+ border-radius: 50%;
+}
+
+#so7rect {
+position: relative;
+ width: 200px;
+  height: 100px;
+ 
+ border-top-left-radius:100px;
+}
+
+#so8rect {
+position: relative;
+ width: 200px;
+  height: 100px;
+ 
+ border-top-left-radius:100%;
+}
+
+#so9rect {
+position: relative;
+ width: 200px;
+  height: 100px;
+ 
+ border-top-left-radius:50%;
+}
+
+#so10rect {
+position: relative;
+ width: 200px;
+  height: 100px;
+ 
+border-top-left-radius:50px 10px;
+}
+
+
+
+#sosquare {
+position: relative;
+ width: 100px;
+  height: 100px;
+}
+
+
+/* Hover over images*/
+
+
+
+.ooverlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+ 
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.m_container:hover .ooverlay {
+  opacity: 1;
+}
+
+.stoverlay{
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 100%;
+  height:0;
+  transition: .5s ease;
+}
+
+.m_container:hover .stoverlay {
+  bottom: 0;
+  height: 100%;
+}
+.hmiddle {
+	
+  
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+
+  left: 50%;
+ 
+  top:50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+
+.m_container:hover .iimage {
+  opacity: 0.5;
+}
+
+.m_container:hover .hmiddle {
+  opacity: .3;
+}
+
+.sboverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
+
+.m_container:hover .sboverlay {
+  height: 100%;
+}
+.sloverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
+}
+
+.m_container:hover .sloverlay {
+  width: 100%;
+}
+.sroverlay {
+  position: absolute;
+  bottom: 0;
+  left: 100%;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
+}
+
+.m_container:hover .sroverlay {
+  width: 100%;
+  left: 0;
+}
+
+/* Flow Charts*/
+
+.divdrag{
+  cursor:move;
+  color:black;
+  margin:2px;
+  border:2px solid black;
+  float:left;
+}
+.divdrag2{
+  cursor:move;
+  float:left;
+}
+.draa .divdrag:hover{
+background-color:yellow;	
+	
+}
+.draggable{
+  background-color:yellow;
+}
+#draa{
+	width:300px;
+	height:300px;
+	background-color:lightgray;
+	
+	
+}
+#fcharts{
+	height:auto;
+	max-width:500px;
+	border:8px solid #d7e0e2;
+	border-radius:2px;
+	z-index:10;
+	top: 0;
+	left: 0;
+           position:absolute;
+	background-color:#ffffff;
+	text-align:center;
+	display:block;
+	padding:10px;
+       opacity:1;
+}
+#rhombus{
+width:100px;
+height:100px;
+  
+-ms-transform: rotate(450deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+    transform: rotate(45deg);
+
+}
+ 
+#parallelogram 
+{      
+   width:100px;
+height:100px;
+  
+ transform: skewX(-40deg) scaleY(1); /* .86 = cos(30deg) */
+}
+
+/*Modal css*/
+.modal {
+    display: none; /* Hidden by default */
+    position: relative; /* Stay in place */
+    z-index: 1; /* Sit on top */
+	margin-top:40px;
+   animation-timing-function: ease-out;
+   -webkit-animation-timing-function: ease-out;
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+	left:0;
+	top:0;
+    border: 1px solid #888;
+	height:500px;
+	width:700px;
+	min-height:500px;
+	min-width:auto;
+	max-height:500px;
+	max-width:700px;
+	
+	box-shadow: 8px 8px 8px 0 rgba(0,0,0,0.2),6 6px 20px 0 rgba(0,0,0,0.19);
+   
+	
+}
+
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+	top:0px;
+	min-height:70px;
+	
+	
+}
+
+.modal-body {padding: 2px 16px;
+    overflow-x:hidden;
+	overflow-y:scroll;
+	min-height:300px;
+	min-width:640px;
+	max-height:300px;
+	max-width:640px;
+}
+
+.modal-footer {
+
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+	min-height:70px;
+	bottom:0px;
+}
+
+
+table, td, th{
+		border:1px solid black;	
+}
+	
+
+.eval_complete{
+	background-color:#b3b3b3;
+	
+}
+
+.evaluation:hover{
+	cursor:pointer;
+	background-color:#336699;
+	color:white;
+	
+}
+
+audio{
+	border-radius:45px;
+	
+}
+
+.eval_btn{
+	border:2px solid #336699;
+	background-color:#ffffff;
+	border-radius:10px;
+	padding:5px;
+	
+}
+
+.eval_btn:hover{
+	cursor:pointer;
+	background-color:#336699;
+	color:#ffffff;
+}
+
+/*----------------------------------------------------------------------------------------------------
+Author:ld824416 LL
+Quiz
+----------------------------------------------------------------------------------------------------*/
+
+
+#title{
+    border-bottom: 3px solid #336699;
+    color:#336699;
+    font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; 
+    font-size: 30px;
+}
+
+#frame {
+      width:auto;
+      border:0px;
+      background:#fff;
+      padding:10px;
+      margin:3px;
+}
+
+p.pager {
+      margin:5px 0 5px;
+      font:bold Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+      color:#999;
+  }
+  img.question-image {
+      display:block;
+      margin:10px auto;
+      border:1px solid #ccc;
+      width:80%;
+      height:auto;
+  }
+  #logo1 {
+      border:none;
+      height: 42px;
+  }
+  #logo2 {
+      border:none;
+      height: 50px;
+  }
+
+  #choice-block {
+      display:block;
+      list-style:none;
+      margin:0;
+      padding:0;
+  }
+  #submitbutton {
+      background:#5a6b8c;
+  }
+  #submitbutton:hover {
+      background:#7b8da6;
+  }
+  #explanation {
+      margin:0 auto;
+      padding:20px;
+      width:75%;
+  }
+  .choice-box {
+      display:block;
+      text-align:center;
+      margin:8px auto;
+      padding:10px 0;
+      border:1px solid #666;
+      cursor:pointer;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+  }
+.jcm_audio {
+    display: table;
+    margin: 0 auto;
+}
+
+.jcm_video {
+    display: table;
+    margin: 0 auto;
+}
+
+p.question {
+    font-weight: bold;
+    height: 20px;
+    
+}
+
+#explanation {
+    font-style: italic;
+}
+
+}
+
+.score {
+    background-color: rgb(42, 38, 91);
+    color: white;
+}
+
+p.score {
+    color: white;
+    text-align: center;
+}
+
+.finalscore {
+    background-color: rgb(241, 123, 13);
+    color: white;
+}
+
+p.finalscore {
+    text-align: center;
+    font-size: 25px;
+}
+
+#resulttitle {
+    height: 25px;  
+}
+
+#qresult {
+    height: 25px;
+}
+
+#resultanswer {
+    height: 25px;
+}
+
+#choiceblock {
+    height: 25px;
+}
+
+.resulttitle {
+    height: 25px;
+    margin: 0;
+}
+
+.questionresult {
+    height: 25px;
+    margin: 0;
+    font-size: 16px;
+}
+
+.resultanswer {
+    height: 25px;
+    margin: 0;
+    font-size: 16px;
+}
+
+.choice-block {
+    height: 25px;
+    margin: 0;
+    background-color: lightgrey;
+    font-size: 16px;
+    font-style: italic;
+    color: darkred;
+}
