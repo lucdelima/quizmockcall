@@ -17,6 +17,9 @@
 	</style>
 	<script>
 	$(document).ready(function(){
+			
+			$("#frame").load("mockcallquiz.html");
+		
 			setMediaSrc(0);
 			//remove Contenteditable=true
 			$('.jcm_ref').each(function(){
@@ -110,18 +113,8 @@
     <body style="overflow-y:auto">
 	<div class="main_class" id="main">
 	
-        <div id = "frame"
-           role = "content" >
-        </div>
-        
-        </div>
-	<script type="text/javascript">
-         
-            $(document).ready(function() {
-                $("#frame").load("mockcallquiz.html");
-        });
-    
-        </script>   
+        	<div id = "frame" role = "content" > </div> 
+        </div> 
     </body>
 
 </html>
