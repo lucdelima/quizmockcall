@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------------------------
-Author:vl406891 VL
+Author:vl406891 VL Vishal Luthra
 Version: CSHD template 1.1.4
 
 ----------------------------------------------------------------------------------------------------*/
@@ -186,16 +186,33 @@ Navigation bar
 	padding-left:10px;
 	padding-right:10px;
 	font-size:20px;
-	  background :#4462DB;
-border:5px solid #ffffff;
+    background :#4462DB;
+    border:5px solid #ffffff;
 	border-radius:50px;
 	margin:2px;
 	color:#ffffff;
 }
 
 #markcomplete_label{
-	 visibility: hidden;
-	 opacity:0;
+	visibility: visible;
+	opacity:1;
+    display:inline;
+	padding:2px;
+	padding-left:10px;
+	padding-right:10px;
+	font-size:20px;
+    background :#4462DB;
+    border:5px solid #ffffff;
+	border-radius:50px;
+	margin:2px;
+	color:#ffffff;
+    list-style-type: none;
+}
+
+#markcomplete_label:hover{
+	 color:#ffffff;
+	 background :#ff751a;
+    border:5px solid #ffffff;
 }
 
 

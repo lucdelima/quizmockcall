@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------------------------------
-Author:vl406891 VL
+Author:vl406891 VL Vishal Luthra
 Version: CSHD template 1.0.4
 Purpose: JavaScript to be used for index.html (Jukebox HTML course template)
 ----------------------------------------------------------------------------------------------------*/

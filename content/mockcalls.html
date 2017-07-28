@@ -17,10 +17,8 @@
 	</style>
 	<script>
 	$(document).ready(function(){
-			
-			$("#frame").load("mockcallquiz.html");
-		
-			setMediaSrc(0);
+	
+     	setMediaSrc(0);
 			//remove Contenteditable=true
 			$('.jcm_ref').each(function(){
 				$(this).removeAttr("contenteditable");
@@ -97,6 +95,7 @@
 		}		
 	});
 	function viewSection(obj){
+	
 			if(obj.length){
 			id=obj[0].id;
 			$('#section'+id).attr("contenteditable","false");
@@ -111,10 +110,17 @@
 
 
     <body style="overflow-y:auto">
-	<div class="main_class" id="main">
+
 	
-        	<div id = "frame" role = "content" > </div> 
-        </div> 
+        <div class="main_class" id="main">
+            
+            <object type="text/html" data="content/mockcallquiz.html" width="100%" height="1200px" style="overflow:auto;border:0px ridge blue">
+    
+            </object>
+                    
+		
+        </div>
+
     </body>
 
 </html>

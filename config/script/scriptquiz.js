@@ -22,10 +22,10 @@ var mockquiz = [
             "audio" : "../audio/IntroductionCustomerService_2.mp3",
             "choices" : [
                 "A - Did you try to close the browser and open a new one?",
-                "B - It would be my pleasure to assist you. May I please confirm your fist and last name so I could open a ticket for this?",
+                "B - It would be my pleasure to assist you. May I please confirm your first and last name so I could open a ticket for this?",
                 "C - May I place you on hold while I investigate the issue?"
             ],
-            "correct" : "B - It would be my pleasure to assist you. May I please confirm your fist and last name so I could open a ticket for this?",
+            "correct" : "B - It would be my pleasure to assist you. May I please confirm your first and last name so I could open a ticket for this?",
             "explanation" : "The analyst needs to creat a new ticket under the correct user profile or verify that the correct user profile is being used for an existing ticket"
         },
         {
@@ -33,7 +33,7 @@ var mockquiz = [
             "question" : "3) What are the contact details that need to be verified during the beginning of the call?",
             "video" : "../video/introduction3.mp4",
             "choices" : [
-                "A - Since we found the profile, there is no need to verify the client's details.",
+                "A - Since we found the profile, there is no need to verify the client's details",
                 "B - We need to verify the client roles in the study",
                 "C - The client's name and contact details such as a valid email address and telephone number should be verified at the beginning of the call",
                 "D - None of the above"
@@ -128,7 +128,7 @@ var mockquiz = [
                 
             ],
             "correct" : "C and D are correct",
-            "explanation" : "Explanation about applications that need to be used"
+            "explanation" : "In order to reset myLesson passwords, the analyst needs to first search for the user in GLMS and MUL. Once the user is located and account is active, analyst needs to reset user's password using IDM."
         },
         {
             "title" : "Troubleshooting, Hold Process and Customer Service",
@@ -328,6 +328,26 @@ jQuery(document).ready(function ($) {
              }
          })
      }
+    
+
+    function markComplete(){
+	
+	var msg;
+	
+	msg = "<p>Course has been Mark Complete!</p><span class='button' onclick='prompt(100)'>OK</span>";
+		
+	$("#alertbox").html(msg);
+	
+
+    }
+
+
+    function prompt(num){
+	
+
+        doLMSSetValue("cmi.core.lesson_status","completed");
+		doLMSFinish();	
+	}
 
 
      function setupButtons() {
@@ -380,9 +400,15 @@ jQuery(document).ready(function ($) {
          $('#pager').remove();
          $('#choice-block').empty();
          $('#submitbutton').remove();
+               
+         $('#question').text('Please see below score for answers provided and press Mark Complete button:');
          
-         $('#question').text('Please see below score for answers provided:');
+         $(document.createElement('p')).appendTo('#question');
+                                                          
+         $(document.createElement('li')).text('Mark Complete').attr('align', 'center').attr('id', 'markcomplete_label').attr('onclick', 'markComplete()').appendTo('#question');
          
+         markComplete();
+                                                             
          $(document.createElement('p')).appendTo('#question');
          
          $('#question').wrap('<div id="resultsblock" style="display:block;margin:0 auto;width:980px;">');
@@ -475,6 +501,8 @@ jQuery(document).ready(function ($) {
          
          $('.finalscore').wrap('<div id="scorefin" style="display:block;margin:0;border:1px solid black;background-color: rgb(241, 123, 13);">');
          
+         
+                  
      }
 
      function init() {

@@ -21,6 +21,7 @@ Purpose: main HTML file for Jukebox HTML course
   <script type="text/javascript" src="config/script/progressbar.min.js"></script>
   <script type="text/javascript" src="config/script/script.js"></script>
 
+
 </head>
 
 <body onkeydown="keyCode(event)">
@@ -29,7 +30,10 @@ Purpose: main HTML file for Jukebox HTML course
 <!------------------------------------------------------------------------------------>
 <!--Main Course Content
 <!------------------------------------------------------------------------------------>
-	<div id="course_content"></div>
+	<div id="course_content"> 
+
+	
+	</div>
 	
 
 <!------------------------------------------------------------------------------------>
@@ -45,7 +49,6 @@ Purpose: main HTML file for Jukebox HTML course
 		<span id="course_title_label">Label</span>
 		<div class="navigation_arrow_container">
 		<ul class="navigation_arrow">
-			<li id="markcomplete_label" onclick="markComplete();">Mark Complete</li>
 			<li id="nav_left" onclick="navigatePage(0)"><</li>
 			<li id="nav_right" onclick="navigatePage(1)">></li>
 		</ul>
@@ -74,6 +77,7 @@ Purpose: main HTML file for Jukebox HTML course
 		<p id="loading_string">Loading Content...</p>
 		<button id="start_course_btn" onclick="startCourse()">Start Course</button>	
 		</div>
+		
 	</div>
 	
 	
